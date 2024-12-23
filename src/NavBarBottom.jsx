@@ -15,7 +15,7 @@ const NavBarBottom = () => {
       <div className='navBarBottom'>
         <div className="navBarBottom__box navBarBottom-left">
           <a href=""> Dónde ubicarnos </a>
-          <a href=""> Servicios incluídos </a>
+          <a href="#servicios"> Servicios incluídos </a>
           <a href=""> Habitaciones disponíbles </a>
           <a href=""> Retiros empresariales </a>
           <a href=""> Quiénes somos? </a>

@@ -153,7 +153,7 @@ function App() {
           <SwiperSlide className='swiperSlide-hero-section first-slide'>
             <div className='video'>
               <motion.video
-                autoPlay loop src="/paraty-hero-video.mp4"
+                autoPlay loop src="/P-gina-web-Posada.-Muestra/assets/paraty-hero-video.mp4"
                 // initial={{scale: 1}}
                 style={{scale: scaleVideo}}
               ></motion.video>
@@ -162,7 +162,7 @@ function App() {
               <h2>
                 Donde la naturaleza, la tradición y la alegría se reúnen en un solo lugar.
               </h2>
-              <a href='../explora-paraty.html' className='button-first-slide'>
+              <a href='/P-gina-web-Posada.-Muestra/explora-paraty.html' className='button-first-slide'>
                 Explora Paraty
               </a>
             </div>
@@ -259,11 +259,11 @@ function App() {
             <div className='informative-text-cards'>
               <h3>Suite N°1</h3>
               <p>Vistas al mar y relax.</p>
-              <Button texto={"Quiero saber más!"}></Button>
+              <Button link={"/P-gina-web-Posada.-Muestra/habitacion-uno.html"} texto={"Quiero saber más!"}></Button>
             </div>
 
             <div className='card-container'>
-              <Card imgSrc="/habitacion-uno.webp">
+              <Card imgSrc="/P-gina-web-Posada.-Muestra/assets/habitacion-uno.webp">
               </Card>
             </div>
 
@@ -305,7 +305,7 @@ function App() {
           className="mySwiper"
         >
           <SwiperSlide>
-            <img src="/retiro-empresarial-tiny.webp" alt="" />
+            <img src="/P-gina-web-Posada.-Muestra/assets/retiro-empresarial-tiny.webp" alt="" />
 
             <p href="">
               Retiros empresariales
@@ -316,7 +316,7 @@ function App() {
             </button>
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/comida.webp" alt="" />
+            <img src="/P-gina-web-Posada.-Muestra/assets/comida.webp" alt="" />
 
             <p href="">
               Comidas y desayunos
@@ -327,7 +327,7 @@ function App() {
             </button>
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/playa-tiny.webp" alt="" />
+            <img src="/P-gina-web-Posada.-Muestra/assets/playa-tiny.webp" alt="" />
 
             <p href="">
               Playas de Paraty
@@ -339,7 +339,7 @@ function App() {
           </SwiperSlide>
 
           <SwiperSlide>
-            <img src="/barco-tiny.webp" alt="" />
+            <img src="/P-gina-web-Posada.-Muestra/assets/barco-tiny.webp" alt="" />
 
             <p href="">
               Rutas en barco
@@ -367,7 +367,7 @@ function App() {
           <div className='info-img-container'>
             <img 
             className='paraty-info-img' 
-            src="/paraty-info.png" alt=""/>
+            src="/P-gina-web-Posada.-Muestra/assets/paraty-info.png" alt=""/>
           </div>
 
           <div className='info-container__button'>
@@ -382,7 +382,7 @@ function App() {
         
       </section>
 
-      <section className='servicios'>
+      <section className='servicios' id='servicios'>
         <motion.h2 
           className='servicios-title'
           initial={{scale: 1}}
@@ -393,13 +393,13 @@ function App() {
         
         <div>
           <article className='paquetes-box paquetes-izq'>
-            <img src="/gastronomia.webp" alt="" />
+            <img src="/P-gina-web-Posada.-Muestra/assets/gastronomia.webp" alt="" />
             <span>Comidas caseras</span>
             <button>Ver más</button>
           </article>
 
           <article className='paquetes-box paquetes-der'>
-            <img src="/retiro-empresarial-big.webp" alt="" />
+            <img src="/P-gina-web-Posada.-Muestra/assets/retiro-empresarial-big.webp" alt="" />
             <span>Retiros empresariales</span>
             <button>Ver más</button>
           </article>

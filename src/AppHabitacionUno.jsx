@@ -84,7 +84,7 @@ function AppHabitacionUno() {
 
       <section className='habitacion-hero-section'>
         <motion.img 
-          src="/habitacion-uno.webp"
+          src="/P-gina-web-Posada.-Muestra/assets/habitacion-uno.webp"
           alt=""
           initial={{scale: 1}}
           style={{scale: scaleImage}}
@@ -175,16 +175,16 @@ function AppHabitacionUno() {
           className="swiper-imagenes-habitacion"
         >
           <SwiperSlide>
-            <img src="/habitacion-uno-first.webp" alt="" />
+            <img src="/P-gina-web-Posada.-Muestra/assets/habitacion-uno-first.webp" alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/habitacion-uno-thin.webp" alt="" />
+            <img src="/P-gina-web-Posada.-Muestra/assets/habitacion-uno-thin.webp" alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/habitacion-uno-second.webp" alt="" />
+            <img src="/P-gina-web-Posada.-Muestra/assets/habitacion-uno-second.webp" alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/habitacion-uno-third.webp" alt="" />
+            <img src="/P-gina-web-Posada.-Muestra/assets/habitacion-uno-third.webp" alt="" />
           </SwiperSlide>
         </Swiper>
 
