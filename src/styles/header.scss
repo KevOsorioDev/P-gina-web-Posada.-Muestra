@@ -1,0 +1,172 @@
+@import 'variables';
+
+body{
+  .headerFull{
+    position: absolute;
+    top: 0;
+  
+    width: 100%;
+    height: 13vh;
+    
+    z-index: 100;
+
+    img{
+      position: absolute;
+      top: 20%;
+      left: 3%;
+      width: 7%;
+
+      @media (max-width: 950px) {
+        left: 6%;
+        width: 10%;
+      }
+
+      @media (max-width: 600px) {
+        left: 5%;
+
+        width: 11%;
+      }
+
+      @media (max-width: 450px) {
+        display: none;
+      }
+    }
+    
+    h1 {
+      position: absolute;
+      top: 23%;
+      left: 50%;
+
+      font-family: "Merriweather", serif;
+      font-size: clamp(0.3rem, 0.0103rem + 1.931vw, 2.4rem);
+
+      transform: translate(-50%, 0%);
+      
+      color: $azul-oscuro;
+
+      @media (max-width: 950px) {
+        top: 38%;
+        left: 50%;
+
+        font-size: clamp(0.3rem, -0.4099rem + 4.7324vw, 2.4rem);
+      }
+
+      @media (max-width: 600px) {
+        left: 49%;
+
+        font-size: clamp(0.3rem, -0.7rem + 6.6667vw, 1.8rem);
+      }
+
+      @media (max-width: 450px) {
+        top: 30%;
+        left: 6%;
+        transform: unset;;
+
+        font-size: clamp(0.3rem, -1.2692rem + 10.4615vw, 2rem);
+      }
+    }
+    
+    .languages{
+      position: absolute;
+      top: 20%;
+      right: 3%;
+      
+      font-size: clamp(0.3rem, 0.0655rem + 1.5632vw, 2rem);
+      font-weight: 700;
+      
+      color: $azul-oscuro;
+
+      @media (max-width: 950px) {
+        top: 38%;
+
+        font-size: clamp(0.3rem, -1.2692rem + 10.4615vw, 2rem);
+      }
+
+      @media (max-width: 600px) {
+        top: 40%;
+
+        font-size: clamp(0.3rem, -0.4rem + 4.6667vw, 1.35rem);
+      }
+
+      @media (max-width: 450px) {
+        top: 31%;
+        right: 5%;
+
+        font-size: clamp(0.3rem, -0.9rem + 8vw, 2.1rem);
+      }
+
+      .languages__selector{
+        cursor: pointer;
+      }
+    }
+    
+    .noIcon{
+      display: none;
+    }
+  
+    .hiddenFullNavbar{
+      display: none;
+    }
+  
+    .fullNavbar{
+      display: flex;
+      align-items: center;
+  
+      display: flex;
+      gap: 1vw;
+  
+      li{
+        display: flex;
+        align-items: center;
+  
+        list-style: none;
+  
+        a{
+          padding: 1vh .9vw;
+          border-radius: 5px;
+  
+          text-decoration: none;
+          font-size: clamp(0.3rem, 0.1897rem + 0.7356vw, 1.1rem);
+          font-weight: 600;
+  
+          color: $verde-claro-color;
+          background-color: $verde-fuerte-color;
+  
+          opacity: .5;
+          transition: all .25s ease;
+  
+          @media (max-width: 980px) {
+            padding: .5vh .8vw;
+          }
+  
+          &:hover{
+            opacity: 1;
+          }
+        }
+      }
+    }
+  
+    .responsiveNavbarHidden{
+      display: none;
+  
+      ul{
+        display: none;
+      }
+    }
+  }
+
+  .headerFull-off{
+    opacity: .2;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7); // Oscurecimiento
+    z-index: 10; // Debe estar debajo del menú responsive
+    pointer-events: none; // Evita que interfiera cuando no esté visible
+  } 
+}

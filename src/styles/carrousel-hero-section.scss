@@ -1,0 +1,947 @@
+@import 'variables';
+@import 'navBar-bottom';
+
+body{
+  .carrousel-hero-section{
+    position: relative;
+    
+    .swiper-hero-section{
+
+      .swiper-button-next, .swiper-button-prev {
+        color: $azul-oscuro;
+        opacity: .5;
+
+        transition: transform .25s;
+
+        &:hover{
+          // color: $negro-color;
+
+          opacity: 1;
+
+          transform: scale(1.2);
+        }
+
+        @media (max-width: 950px) {
+          top: 30%;
+        }
+      }
+      .swiper-button-next {
+        right: 2vw;
+      }
+      .swiper-button-prev {
+        left: 2vw;
+      }
+
+      .first-slide{
+        .video-text{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+
+          position: absolute;
+          top: 65%;
+          left: 37vw;
+
+          transform: translate(-50%, -50%);
+
+          @media (max-width: 1024px) {
+            left: 34vw;
+          }
+
+          @media (max-width: 950px) {
+            justify-content: center;
+            align-items: center;
+            top: 60%;
+            left: 50%;
+            gap: 12px;
+          }
+
+          h2{
+            width: 30vw;
+  
+            font-size: clamp(0.3rem, -0.0724rem + 2.4828vw, 3rem);
+            
+            color: #F3F7F0;
+            text-shadow: 2px 2px 4px $naranja-oscuro;
+  
+            z-index: 12;
+  
+            @media (max-width: 950px) {
+              width: 60vw;
+
+              text-align: center;
+              font-size: clamp(0.3rem, -1.8231rem + 14.1538vw, 2.6rem);
+            }
+
+            @media (max-width: 600px) {
+              width: 70vw;
+
+              font-size: clamp(0.3rem, -0.7667rem + 7.1111vw, 1.9rem);
+            }
+
+            @media (max-width: 500px) {
+              width: 80vw;
+
+              font-size: clamp(0.3rem, -1.5286rem + 12.1905vw, 1.9rem);
+            }
+          }
+  
+          .button-first-slide{
+            width: auto;
+            border: 3px solid $rosa-color;
+            border-radius: 10px;
+            padding: .5vh .5vw;
+  
+            text-decoration: none;
+            font-size: clamp(0.3rem, 0.0655rem + 1.5632vw, 2rem);
+  
+            color: $rosa-color;
+            background-color: #ffddd23c;
+            backdrop-filter: blur(15px);
+  
+            z-index: 12;
+            transition: .25s;
+            cursor: pointer;
+  
+            &:hover{
+              border: 3px solid $rosa-color;
+  
+              color: $naranja-oscuro;
+              background-color: $rosa-color;
+            }
+  
+            @media (max-width: 950px) {
+              font-size: clamp(0.3rem, -0.2746rem + 3.831vw, 2rem);
+            }
+
+            @media (max-width: 500px) {
+              padding: .8vh 1.7vw;
+
+              font-size: clamp(0.3rem, -1.0714rem + 9.1429vw, 1.5rem);
+            }
+          }
+        }
+
+        .callendar {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          left: 80%;
+          top: 50%;
+      
+          transform: translate(-50%, -50%);
+      
+          padding: 2vh 2vw 3.5vh 2vw;
+          height: auto;
+          border-radius: 5px;
+      
+          background-color: $naranja-claro;
+      
+          z-index: 12;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      
+          @media (max-width: 1440px) {
+            width: auto;
+          }
+
+          @media (max-width: 1100px) {
+            padding-bottom: 2.2vh;
+          }
+      
+          @media (max-width: 950px) {
+            top: 50%;
+            left: 50%;
+      
+            padding: 1vh 1vw;
+            width: auto;
+      
+            z-index: 1010;
+          }
+        
+          .text-disponibilidad-big{
+            position: relative;
+
+            width: 100%;
+            padding-bottom: 2vh;
+      
+            text-align: center;
+            font-size: clamp(0.3rem, 0.0379rem + 1.7471vw, 2.2rem);
+            font-weight: 700;
+      
+            color: $blanco-color;
+
+            &:after {
+              content: "";
+              position: absolute;
+              left: 18%;
+              right: 0;
+              bottom: calc(var(--deco-height) * 1);
+          
+              --deco-height: 0.3125em;
+          
+              width: 64%;
+              height: var(--deco-height);
+              transform: scale(1.1);
+          
+              background-image: url("data:image/svg+xml,%3Csvg width='100' height='64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='M-17 30.5C-1 22 72-4 54 13 37.9 28.2-2.5 57.5 16 55.5s72-29 104-40' stroke='%23F3F7F0' stroke-width='10'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M0 0h100v64H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+
+              background-size: auto 100%;
+              background-repeat: round;
+              background-position: 0em;
+            }
+          }
+          
+          .callendar__button {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            margin-top: 2vh;
+      
+            width: auto;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 5px;
+      
+            font-weight: bold;
+            font-size: clamp(0.3rem, 0.1621rem + 0.9195vw, 1.3rem);
+      
+            background-color: #ffffff;
+            color: #E29578;
+      
+            cursor: pointer;
+            transition: .25s;
+      
+            &:hover {
+              background-color: $rosa-color;
+            }
+      
+            @media (max-width: 1100px) {
+              padding: .5rem;
+      
+              font-size: clamp(0.3rem, 0.1605rem + 0.9302vw, 0.8rem);
+            }
+      
+            @media (max-width: 950px) {
+              padding: .2vh 2vw;
+              border-radius: 10px;
+      
+              font-size: clamp(0.3rem, -0.0718rem + 2.4789vw, 1.4rem);
+            }
+      
+            @media (max-width: 600px) {
+              padding: .5vh 2vw;
+              border-radius: 8px;
+      
+              font-size: clamp(0.3rem, -0.3rem + 4vw, 1.2rem);
+            }
+      
+            @media (max-width: 450px) {
+              font-size: clamp(0.3rem, -0.5842rem + 5.8947vw, 1rem);
+            }
+          }
+        
+          .react-datepicker {
+            // width: 70%;
+            border: none;
+            border-radius: 5px;
+      
+            font-family: 'Rocher', sans-serif;
+      
+            background-color: $blanco-color;
+            color: #333;
+        
+            .react-datepicker__header {
+              border-bottom: none;
+              padding-top: 6vh;
+      
+              background-color: $rosa-color;
+              color: #ffffff;
+      
+              @media (max-width: 1100px) {
+                padding-top: 6vh;
+              }
+      
+              .react-datepicker__current-month{
+                position: absolute;
+                top: 30%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+      
+                width: 100%;
+      
+                font-size: clamp(0.3rem, 0.1069rem + 1.2874vw, 1.7rem);
+                text-shadow: none;
+      
+                // color: $naranja-claro;
+                color: $naranja-oscuro;
+      
+                @media (max-width: 1440px) {
+                  margin: 0px;
+                }
+      
+                @media (max-width: 1024px) {
+                  width: 100%;
+      
+                  font-size: clamp(0.3rem, 0.0857rem + 1.4286vw, 1rem);
+                }
+      
+                @media (max-width: 950px) {
+                  top: 10px;
+      
+                  font-weight: bold;
+                  font-size: clamp(0.3rem, -0.038rem + 2.2535vw, 1.3rem);
+                }
+      
+                @media (max-width: 450px) {
+                  top: 12.5px;
+      
+                  font-size: clamp(0.3rem, -0.5842rem + 5.8947vw, 1rem);
+                }
+              }
+            }
+        
+            .react-datepicker__day-name,
+            .react-datepicker__day,
+            .react-datepicker__time-name {
+              width: 2.5rem;
+              padding: .4rem 0rem;
+              
+              margin: .25rem;
+      
+              font-weight: 700;
+              font-size: clamp(0.3rem, 0.1759rem + 0.8276vw, 1.2rem);
+      
+              color: $naranja-claro;
+
+              @media (max-width: 1440px) {
+                width: 2rem;
+                padding: .15rem 0;
+
+                margin: .1rem;
+
+                font-size: clamp(0.3rem, 0.19rem + 0.7333vw, 0.85rem);
+              }
+      
+              @media (max-width: 1100px) {
+                width: 1.5rem;
+
+                margin: .1rem;
+
+                line-height: 1.2rem;
+              }
+      
+              @media (max-width: 950px) {
+                margin: .5rem;
+      
+                font-size: clamp(0.3rem, -0.0042rem + 2.0282vw, 1.2rem);
+              }
+      
+              @media (max-width: 768px) {
+                margin: .2rem;
+              }
+      
+              @media (max-width: 430px) {
+                margin: .15rem;
+      
+                font-size: clamp(0.3rem, -0.5842rem + 5.8947vw, 1rem);
+              }
+            }
+        
+            .react-datepicker__day--selected,
+            .react-datepicker__day--in-selecting-range,
+            .react-datepicker__day--in-range {
+              // width: 1.5rem;
+      
+              border-radius: 50%;
+      
+              background-color: #E29578;
+              color: #ffffff;
+            }
+        
+            .react-datepicker__navigation {
+              top: 4%;
+      
+              @media (max-width: 1100px) {
+                top: 3.15%;
+      
+                z-index: 100;
+              }
+      
+              @media (max-width: 950px) {
+                top: 10px;
+      
+                z-index: 100;
+              }
+            }
+      
+        
+            .react-datepicker__navigation--previous {
+              left: 5%;
+
+              @media (max-width: 1100px) {
+                left: 2%;
+              }
+            }
+        
+            .react-datepicker__navigation--next {
+              right: 5%;
+
+              @media (max-width: 1100px) {
+                right: 2%;
+              }
+            }
+      
+            .react-datepicker__month-container{
+              @media (max-width: 1440px) {
+                font-size: clamp(0.3rem, 0.2034rem + 0.6437vw, 1rem);
+              }
+      
+              .react-datepicker__day--weekend{
+                @media (max-width: 1440px){
+                  // width: auto;
+                  // padding: .2vw;
+      
+                  // line-height: 0px;
+                }
+              }
+            }
+
+            .react-datepicker__navigation-icon:before, .react-datepicker__year-read-view--down-arrow {
+              border-color: $naranja-claro;
+              border-style: solid;
+              height: 10px;
+              width: 10px;
+              
+              @media (max-width: 1100px) {
+                height: 5px;
+                width: 5px;
+              }
+            }
+          }
+        }
+
+        .callendar-tinyDisplay{
+          @media (max-width: 950px) {
+            display: none;
+          }
+        }
+
+        .callendar-buttonForDisplay{
+          display: none;
+
+          @media (max-width: 950px) {
+            position: absolute;
+            top: 89%;
+            right: 13%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+  
+            width: 55vw;
+            padding: 1vh 1vw;
+            border-radius: 10px;
+  
+            background-color: $naranja-claro;
+  
+            cursor: pointer;
+  
+            p{
+              text-align: center;
+              font-size: clamp(0.3rem, -0.2746rem + 3.831vw, 2rem);
+  
+              color: $blanco-color;
+
+              @media (max-width: 500px) {
+                font-size: clamp(0.3rem, -1.0846rem + 9.2308vw, 1.8rem);
+              }
+            }
+
+          }
+
+          @media (max-width: 500px) {
+            left: 50%;
+            right: unset;
+          }
+        }
+      }
+
+      .swiperSlide-hero-section{
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        height: 100vh;
+
+        background-color: $blanco-color;
+
+        @media (max-width: 950px) {
+          height: 100vh;
+        }
+
+        
+        .video{
+          position: relative;
+
+          height: auto;
+          width: auto;
+          
+          @media (max-width: 950px) {
+            position: absolute;
+            top: 12%;
+            // bottom: -1%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+          }
+
+          video{
+            height: auto;
+            width: 60vw;
+  
+            z-index: 11;
+
+            @media (max-width: 1440px) {
+              width: 65vw;
+            }
+
+            @media (max-width: 1024px) {
+              width: 67vw;
+            }
+
+            @media (max-width:950px) {
+              width: 100vw;
+              height: 60vh;
+
+              object-fit: cover;
+            }
+          }
+        }
+
+        .img-brazil{
+          height: 65vh;
+          width: 55vw;
+
+          z-index: 11;
+          object-fit: cover;
+        }
+
+        .img-playa-one{
+          position: absolute;
+          top: 10%;
+          right: 0%;
+
+          height: auto;
+          width: 30vw;
+
+          z-index: -1;
+        }
+
+        .img-playa-two{
+          position: absolute;
+          bottom: 10%;
+          left: 0%;
+
+          height: auto;
+          width: 30vw;
+
+          z-index: -1;
+        }
+
+        .other-links-container{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 2vh;
+
+          position: absolute;
+          bottom: 17.5%;
+          right: 0%;
+
+          button{
+            padding: .8vh .8vw;
+            border-radius: 5px;
+            border: none;
+
+            font-weight: 600;
+            font-size: clamp(0.3rem, 0.1345rem + 1.1034vw, 1.5rem);
+
+            color: $blanco-color;
+            background-color: $azul-claro;
+
+            cursor: pointer;
+            transition: .25s;
+
+            &:hover{
+              // padding-left: 1.5vw;
+
+              background-color: $azul-oscuro;
+
+              transform: scale(1.1);
+            }
+          }
+
+          button:nth-child(2) {
+            margin-right: 3vw;
+          }
+
+          button:nth-child(3) {
+            margin-right: 6vw;
+          }
+        }
+      }
+    }
+  }
+
+  .callendar-background-display{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    pointer-events: none;
+  }
+
+  .callendar-background-none{
+    display: none;
+  }
+
+  .callendar-tiny {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    padding: 2vh 5vw 3vh 5vw;
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+
+    background-color: $naranja-claro;
+
+    z-index: 1010;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    overflow: hidden;
+
+    .close-button{
+      position: absolute;
+      top: 0%;
+      right: 0%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 10.2%;
+      height: 7%;
+      border-radius: 0 5px 0 50%;
+
+      font-weight: 800;
+      font-size: clamp(0.3rem, -0.207rem + 3.3803vw, 1.8rem);
+
+      color: $blanco-color;
+      background-color: rgb(226, 63, 63);
+
+      box-shadow: 0px 0px 20px 20px rgb(226, 63, 63);
+
+      cursor: pointer;
+
+      @media (max-width: 500px) {
+        font-size: clamp(0.3rem, -0.8077rem + 7.3846vw, 1.5rem);
+      }
+    }
+
+    .text-disponibilidad-big{
+      position: relative;
+
+      width: 100%;
+      padding-bottom: 4vh;
+
+      text-align: center;
+      font-size: clamp(0.3rem, -0.4437rem + 4.9577vw, 2.5rem);
+      font-weight: 700;
+
+      color: $blanco-color;
+
+      @media (max-width: 768px) {
+        font-size: clamp(0.3rem, -0.4727rem + 5.1515vw, 2rem);
+      }
+
+      @media (max-width: 500px) {
+        font-size: clamp(0.3rem, -1.4538rem + 11.6923vw, 2.2rem);
+      }
+
+      @media (max-width: 400px) {
+        font-size: clamp(0.3rem, -2.1rem + 16vw, 1.9rem);
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 27.5%;
+        right: 0;
+        bottom: calc(var(--deco-height) * 2.8);
+    
+        --deco-height: 0.3125em;
+    
+        width: 45%;
+        height: var(--deco-height);
+        transform: scale(1.5);
+    
+        background-image: url("data:image/svg+xml,%3Csvg width='100' height='64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='M-17 30.5C-1 22 72-4 54 13 37.9 28.2-2.5 57.5 16 55.5s72-29 104-40' stroke='%23F3F7F0' stroke-width='10'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M0 0h100v64H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+
+        background-size: auto 100%;
+        background-repeat: round;
+        background-position: 0em;
+
+        @media (max-width: 800px) {
+          left: 30.7%;
+          bottom: calc(var(--deco-height) * 2.6);
+
+          width: 38%;
+        }
+
+        @media (max-width: 500px) {
+          left: 30.7%;
+          bottom: calc(var(--deco-height) * 3.1);
+
+          transform: scale(1.6);
+
+          width: 38%;
+        }
+
+        @media (max-width: 500px) {
+          left: 30.1%;
+          bottom: calc(var(--deco-height) * 2.6);
+
+          transform: scale(1.6);
+
+          width: 39%;
+        }
+      }
+    }
+    
+    .callendar__button {
+      position: relative;
+      margin-top: 2vh;
+
+      width: auto;
+      padding: .5vh 2vw;
+      border: none;
+      border-radius: 8px;
+
+      font-weight: bold;
+      font-size: clamp(0.3rem, -0.207rem + 3.3803vw, 1.8rem);
+
+      background-color: $rosa-color;
+      color: #E29578;
+
+      cursor: pointer;
+      transition: .25s;
+
+      @media (max-width: 768px) {
+        font-size: clamp(0.3rem, -0.3364rem + 4.2424vw, 1.7rem);
+      }
+
+      @media (max-width: 500px) {
+        font-size: clamp(0.3rem, -0.9923rem + 8.6154vw, 1.7rem);
+      }
+
+      @media (max-width: 400px) {
+        margin-top: 2.2vh;
+
+        font-size: clamp(0.3rem, -1.35rem + 11vw, 1.4rem);
+      }
+
+      &:hover {
+        background-color: $rosa-color;
+      }
+    }
+  
+    .react-datepicker {
+      border: none;
+      border-radius: 20px;
+      padding: 2rem;
+
+      font-family: 'Rocher', sans-serif;
+
+      background-color: $blanco-color;
+
+      @media (max-width: 650px) {
+        padding: 1rem;
+      }
+
+      @media (max-width: 400px) {
+        padding: .7rem;
+      }
+  
+      .react-datepicker__header {
+        padding-top: 8vh;
+        border-bottom: none;
+        border-radius: 20px;
+
+        color: #ffffff;
+        background-color: $rosa-color;
+
+        .react-datepicker__current-month{
+          position: absolute;
+          top: 16.8%;
+          left: 50%;
+          transform: translate(-50%, 0%);
+          margin: 0px;
+
+          width: 100%;
+
+          font-weight: bold;
+          font-size: clamp(0.3rem, -0.3423rem + 4.2817vw, 2.2rem);
+          text-shadow: none;
+
+          color: $naranja-oscuro;
+
+          @media (max-width: 800px) {
+            top: 20%;
+          }
+
+          @media (max-width: 650px) {
+            top: 21%;
+
+            font-size: clamp(0.3rem, -0.5195rem + 5.4634vw, 1.7rem);
+          }
+
+          @media (max-width: 500px) {
+            font-size: clamp(0.3rem, -1.1769rem + 9.8462vw, 1.9rem);
+          }
+
+          @media (max-width: 400px) {
+            font-size: clamp(0.3rem, -1.65rem + 13vw, 1.6rem);
+          }
+        }
+      }
+  
+      .react-datepicker__day-name,
+      .react-datepicker__day,
+      .react-datepicker__time-name {
+        width: 3rem;
+        padding: .6rem 0;
+        margin: .5rem;
+
+        
+        text-align: center;
+        font-weight: 700;
+        font-size: clamp(0.3rem, -0.1056rem + 2.7042vw, 1.5rem);
+
+        color: $naranja-claro;
+
+        @media (max-width: 900px) {
+          font-size: clamp(0.3rem, -0.2571rem + 3.7143vw, 1.6rem);
+        }
+
+        @media (max-width: 650px) {
+          margin: .3rem;
+
+          width: 2.5rem;
+
+          line-height: 1.2rem;
+        }
+
+        @media (max-width: 500px) {
+          width: 2.2rem;
+
+          line-height: 1rem;
+
+          font-size: clamp(0.3rem, -0.7154rem + 6.7692vw, 1.4rem);
+        }
+
+        @media (max-width: 400px) {
+          margin: .25rem;
+
+          font-size: clamp(0.3rem, -1.05rem + 9vw, 1.2rem);
+        }
+      }
+  
+      .react-datepicker__day--selected,
+      .react-datepicker__day--in-selecting-range,
+      .react-datepicker__day--in-range {
+        border-radius: 50%;
+
+        background-color: #E29578;
+        color: #ffffff;
+      }
+  
+      .react-datepicker__navigation {
+        top: 10.7%;
+
+        z-index: 100;
+
+        @media (max-width: 650px) {
+          top: 9%;
+        }
+
+        @media (max-width: 400px) {
+          top: 8%;
+        }
+      }
+
+  
+      .react-datepicker__navigation--previous {
+        left: 12%;
+        
+        @media (max-width: 500px) {
+          left: 10%;
+        }
+      }
+      
+      .react-datepicker__navigation--next {
+        right: 12%;
+
+        @media (max-width: 500px) {
+          right: 10%;
+        }
+      }
+
+      .react-datepicker__month-container{
+        font-size: clamp(0.3rem, -0.2746rem + 3.831vw, 2rem);
+      }
+
+      .react-datepicker__navigation-icon:before, .react-datepicker__year-read-view--down-arrow {
+              
+        @media (max-width: 950px) {
+          height: 15px;
+          width: 15px;
+
+          border-color: $naranja-claro;
+          border-style: solid;
+        }
+      }
+    }
+  }
+
+  .callendar-display{
+    @media (max-width: 950px) {
+      display: flex;
+    }
+  }
+  
+  .callendar-none{
+    display: none;
+    @media (max-width: 950px) {
+      display: none;
+    }
+  }
+}
